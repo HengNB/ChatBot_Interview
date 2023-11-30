@@ -68,7 +68,7 @@ h1 {
    
 }
   
-message-container {
+.message-container {
   background: #ffffff;
   width: 100%;
   display: flex;
