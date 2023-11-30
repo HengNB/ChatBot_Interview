@@ -52,14 +52,14 @@ inputForm.addEventListener('submit', function(event) {
     message.innerHTML = `<p class="chatbot-text" sentUser="${"You"}" sentTime="${currentTime}">${input}</p>`;
     conversation.appendChild(message);
 
-    const response = generateResponse(input);
-
-    message = document.createElement('div');
-    message.classList.add('chatbot-message','chatbot');
-
-    message.innerHTML = `<p class="chatbot-text" sentUser="${"Jamie"}" sentTime="${currentTime}">${response}</p>`;
-    conversation.appendChild(message);
-    message.scrollIntoView({behavior: "smooth"});
+    setTimeout(function () {
+      const response = generateResponse(input);
+      message = document.createElement('div');
+      message.classList.add('chatbot-message','chatbot');
+      message.innerHTML = `<p class="chatbot-text" sentUser="${"Jamie"}" sentTime="${currentTime}">${response}</p>`;
+      conversation.appendChild(message);
+      message.scrollIntoView({behavior: "smooth"});
+    }, 500); 
 });
 
 
